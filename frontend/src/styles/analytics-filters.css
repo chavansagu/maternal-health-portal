@@ -1,0 +1,245 @@
+/* ==========================================================================
+   Advanced Analytics filter panel (AnalyticsFilterBar.jsx)
+   Every class is prefixed .af- so it can't leak into the rest of the theme.
+   Each row sets --af-accent / --af-tint / --af-badge and the fields inside
+   pick the colour up for their hover + focus states.
+   ========================================================================== */
+
+.af-card {
+  --af-ink: #0f1b3d;
+  --af-muted: #64748b;
+  --af-border: rgba(15, 23, 42, 0.09);
+  --af-field-bg: #ffffff;
+  --af-orange-1: #ff7a2f;
+  --af-orange-2: #f2600c;
+
+  background: #ffffff;
+  border: 1px solid var(--af-border);
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 24px;
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.06);
+}
+
+/* ---------------------------------------------------------------- header */
+.af-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+.af-title-wrap { display: flex; align-items: center; gap: 14px; min-width: 0; }
+.af-title-icon {
+  width: 44px; height: 44px; border-radius: 12px;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: linear-gradient(135deg, #fff1e6, #ffe2cc);
+  color: var(--af-orange-2); font-size: 26px; flex: none;
+}
+.af-title { margin: 0; font-size: 20px; font-weight: 800; color: var(--af-ink); line-height: 1.2; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.af-subtitle { margin: 2px 0 0; font-size: 13px; color: var(--af-muted); }
+.af-count {
+  font-size: 11.5px; font-weight: 700; padding: 3px 10px; border-radius: 999px;
+  background: #fff1e6; color: var(--af-orange-2);
+}
+.af-actions { display: flex; align-items: center; gap: 10px; }
+
+.af-btn {
+  height: 42px; padding: 0 20px; border-radius: 10px; border: 1px solid transparent;
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 14px; font-weight: 600; cursor: pointer;
+  transition: transform .12s ease, box-shadow .15s ease, background .15s ease;
+}
+.af-btn:active { transform: translateY(1px); }
+.af-btn-ghost { background: #fff; color: var(--af-ink); border-color: var(--af-border); }
+.af-btn-ghost:hover { background: #f8fafc; box-shadow: 0 2px 8px rgba(15,23,42,.06); }
+.af-btn-primary {
+  color: #fff; background: linear-gradient(135deg, var(--af-orange-1), var(--af-orange-2));
+  box-shadow: 0 6px 16px rgba(242, 96, 12, 0.32);
+}
+.af-btn-primary:hover { box-shadow: 0 8px 20px rgba(242, 96, 12, 0.42); }
+.af-btn-icon { width: 42px; padding: 0; justify-content: center; }
+
+/* ----------------------------------------------------------- applied chips */
+.af-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+.af-chip {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 5px 6px 5px 12px; border-radius: 999px;
+  background: #f1f5f9; color: #334155; font-size: 12px; font-weight: 500;
+  border: 1px solid var(--af-border);
+}
+.af-chip button {
+  border: 0; background: rgba(15,23,42,.08); color: #475569; cursor: pointer;
+  width: 18px; height: 18px; border-radius: 50%; padding: 0;
+  display: inline-flex; align-items: center; justify-content: center; font-size: 12px;
+}
+.af-chip button:hover { background: rgba(239, 68, 68, .18); color: #dc2626; }
+
+/* -------------------------------------------------------------------- rows */
+.af-rows { display: flex; flex-direction: column; gap: 10px; }
+
+.af-row {
+  --af-accent: #2563eb; --af-tint: #eff5ff; --af-badge: #dbe8ff;
+  display: grid; grid-template-columns: 250px minmax(0, 1fr); gap: 20px; align-items: center;
+  padding: 14px 18px; border-radius: 14px;
+  background: var(--af-tint); border: 1px solid transparent;
+}
+.af-blue   { --af-accent: #2563eb; --af-tint: #eef4ff; --af-badge: #d9e6ff; }
+.af-green  { --af-accent: #16a34a; --af-tint: #ecf8f0; --af-badge: #d3f0dc; }
+.af-purple { --af-accent: #7c3aed; --af-tint: #f3efff; --af-badge: #e3d9ff; }
+.af-teal   { --af-accent: #0d9488; --af-tint: #e8f8f5; --af-badge: #ccf0ea; }
+.af-red    { --af-accent: #ef4444; --af-tint: #fef1f1; --af-badge: #fcd7d7; }
+.af-slate  { --af-accent: #475569; --af-tint: #f4f6f9; --af-badge: #e2e8f0; }
+
+.af-row-head { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.af-badge {
+  width: 42px; height: 42px; border-radius: 50%; flex: none;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: var(--af-badge); color: var(--af-accent); font-size: 22px;
+}
+.af-row-title { font-size: 15px; font-weight: 700; color: var(--af-ink); line-height: 1.2; }
+.af-row-hint  { font-size: 12px; color: var(--af-muted); margin-top: 2px; line-height: 1.3; }
+
+.af-row-body { min-width: 0; }
+.af-grid { display: grid; gap: 14px; }
+.af-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.af-cols-risk { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 2fr); }
+
+.af-label { display: block; font-size: 12px; font-weight: 600; color: #334155; margin-bottom: 6px; }
+
+/* -------------------------------------------------------- select / inputs */
+.af-select { position: relative; }
+.af-select select,
+.af-trigger,
+.af-date input {
+  width: 100%; height: 40px; border-radius: 10px;
+  background: var(--af-field-bg); border: 1px solid var(--af-border);
+  box-shadow: 0 1px 2px rgba(15, 23, 42, .04);
+  font-size: 13px; color: var(--af-ink); font-family: inherit;
+  transition: border-color .15s ease, box-shadow .15s ease;
+}
+.af-select select {
+  appearance: none; -webkit-appearance: none; cursor: pointer;
+  padding: 0 34px 0 38px; text-overflow: ellipsis;
+}
+.af-select-icon, .af-trigger-icon {
+  position: absolute; left: 12px; top: 50%; transform: translateY(-50%);
+  font-size: 17px; color: var(--af-accent); pointer-events: none;
+}
+.af-select-caret {
+  position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
+  font-size: 18px; color: #94a3b8; pointer-events: none;
+}
+.af-select select:hover, .af-trigger:hover, .af-date:hover input { border-color: var(--af-accent); }
+.af-select select:focus, .af-trigger:focus-visible, .af-trigger.is-open, .af-date input:focus {
+  outline: none; border-color: var(--af-accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--af-accent) 18%, transparent);
+}
+.af-select select:disabled { background: #f1f5f9; color: #94a3b8; cursor: not-allowed; border-color: var(--af-border); }
+
+/* multi-select dropdown */
+.af-multi { position: relative; }
+.af-trigger {
+  display: flex; align-items: center; text-align: left; cursor: pointer;
+  padding: 0 34px 0 38px; position: relative; overflow: hidden; white-space: nowrap;
+}
+.af-trigger .af-trigger-text { overflow: hidden; text-overflow: ellipsis; }
+.af-trigger .af-select-caret { transition: transform .15s ease; }
+.af-trigger.is-open .af-select-caret { transform: translateY(-50%) rotate(180deg); }
+.af-menu {
+  position: absolute; z-index: 30; left: 0; right: 0; top: calc(100% + 6px);
+  min-width: 190px; max-height: 260px; overflow-y: auto;
+  background: #fff; border: 1px solid var(--af-border); border-radius: 12px; padding: 6px;
+  box-shadow: 0 14px 34px rgba(15, 23, 42, .16);
+}
+.af-option {
+  display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 8px;
+  font-size: 13px; color: var(--af-ink); cursor: pointer; user-select: none;
+}
+.af-option:hover { background: var(--af-tint); }
+.af-option input { accent-color: var(--af-accent); width: 15px; height: 15px; margin: 0; }
+.af-menu-clear {
+  width: 100%; border: 0; background: transparent; color: var(--af-accent); font-size: 12px;
+  font-weight: 600; padding: 6px 10px; text-align: left; cursor: pointer; border-top: 1px solid var(--af-border); margin-top: 4px;
+}
+
+/* ------------------------------------------------------------ time period */
+.af-time { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; }
+.af-presets { display: flex; flex-wrap: wrap; gap: 8px; }
+.af-preset {
+  height: 34px; padding: 0 14px; border-radius: 8px; cursor: pointer;
+  background: #fff; color: #334155; border: 1px solid var(--af-border);
+  font-size: 12.5px; font-weight: 500; transition: all .15s ease;
+}
+.af-preset:hover { border-color: var(--af-accent); color: var(--af-accent); }
+.af-preset.is-active {
+  background: var(--af-accent); border-color: var(--af-accent); color: #fff;
+  box-shadow: 0 4px 12px color-mix(in srgb, var(--af-accent) 40%, transparent);
+}
+.af-date {
+  margin-left: auto; display: flex; align-items: center; gap: 8px;
+  background: var(--af-field-bg); border: 1px solid var(--af-border); border-radius: 10px;
+  padding: 0 12px; height: 40px; box-shadow: 0 1px 2px rgba(15,23,42,.04);
+}
+.af-date .af-date-icon { color: var(--af-accent); font-size: 17px; flex: none; }
+.af-date input { border: 0; box-shadow: none; height: 36px; padding: 0; width: 118px; background: transparent; font-size: 12.5px; }
+.af-date input:focus { box-shadow: none; }
+.af-date .af-dash { color: #94a3b8; }
+
+/* ------------------------------------------------- risk factor check pills */
+.af-pills { display: flex; flex-wrap: wrap; gap: 8px; }
+.af-pill {
+  display: inline-flex; align-items: center; gap: 8px; height: 34px; padding: 0 12px;
+  border-radius: 8px; background: #fff; border: 1px solid var(--af-border);
+  font-size: 12.5px; color: #334155; cursor: pointer; user-select: none;
+  transition: all .15s ease;
+}
+.af-pill:hover { border-color: var(--af-accent); }
+.af-pill input { accent-color: var(--af-accent); width: 15px; height: 15px; margin: 0; cursor: pointer; }
+.af-pill.is-on { background: color-mix(in srgb, var(--af-accent) 10%, #fff); border-color: var(--af-accent); color: var(--af-accent); font-weight: 600; }
+.af-pill small { opacity: .65; font-weight: 500; }
+.af-more-link {
+  border: 0; background: transparent; color: var(--af-accent); font-size: 12.5px; font-weight: 600;
+  cursor: pointer; padding: 0 4px; height: 34px;
+}
+.af-empty { font-size: 12.5px; color: var(--af-muted); align-self: center; }
+
+.af-toggle-row { display: flex; justify-content: flex-start; margin-top: 2px; }
+.af-toggle {
+  border: 1px dashed var(--af-border); background: transparent; color: #475569;
+  border-radius: 10px; height: 34px; padding: 0 14px; font-size: 12.5px; font-weight: 600; cursor: pointer;
+  display: inline-flex; align-items: center; gap: 6px;
+}
+.af-toggle:hover { background: #f8fafc; }
+
+/* ------------------------------------------------------------ responsive */
+@media (max-width: 1199px) {
+  .af-cols-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .af-cols-risk { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .af-cols-risk > :last-child { grid-column: 1 / -1; }
+  .af-row { grid-template-columns: 1fr; gap: 12px; }
+  .af-date { margin-left: 0; }
+}
+@media (max-width: 575px) {
+  .af-card { padding: 14px; border-radius: 16px; }
+  .af-cols-4, .af-cols-risk { grid-template-columns: 1fr; }
+  .af-actions { width: 100%; }
+  .af-actions .af-btn:not(.af-btn-icon) { flex: 1; justify-content: center; }
+  .af-date { width: 100%; }
+  .af-date input { width: 100%; min-width: 0; }
+}
+
+/* ------------------------------------------------------------- dark mode */
+[data-bs-theme="dark"] .af-card {
+  --af-ink: #e8edf7; --af-muted: #9aa7bd; --af-border: rgba(255, 255, 255, .12); --af-field-bg: rgba(255, 255, 255, .05);
+  background: #1c2230;
+}
+[data-bs-theme="dark"] .af-row { background: color-mix(in srgb, var(--af-accent) 11%, transparent); }
+[data-bs-theme="dark"] .af-badge { background: color-mix(in srgb, var(--af-accent) 24%, transparent); }
+[data-bs-theme="dark"] .af-label, [data-bs-theme="dark"] .af-preset, [data-bs-theme="dark"] .af-pill { color: #cbd5e1; }
+[data-bs-theme="dark"] .af-preset, [data-bs-theme="dark"] .af-pill, [data-bs-theme="dark"] .af-btn-ghost { background: rgba(255,255,255,.05); }
+[data-bs-theme="dark"] .af-menu { background: #232a3b; }
+[data-bs-theme="dark"] .af-chip { background: rgba(255,255,255,.07); color: #cbd5e1; }
+[data-bs-theme="dark"] .af-select select:disabled { background: rgba(255,255,255,.04); }
+[data-bs-theme="dark"] .af-title-icon, [data-bs-theme="dark"] .af-count { background: rgba(242, 96, 12, .18); }

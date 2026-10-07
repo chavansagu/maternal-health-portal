@@ -1,0 +1,219 @@
+2026-04-09 12:38:01,494 | INFO | ============================================================
+2026-04-09 12:38:01,495 | INFO | Aadhaar Migration Started
+2026-04-09 12:38:01,495 | INFO | Timestamp: 2026-04-09 12:38:01
+2026-04-09 12:38:01,495 | INFO | ============================================================
+2026-04-09 12:38:01,658 | INFO | Total records with Aadhaar number: 42
+2026-04-09 12:38:02,027 | INFO | [1/42] ID=73 | MIGRATED | Masked: XXXXXXXX1010
+2026-04-09 12:38:02,313 | INFO | [2/42] ID=74 | MIGRATED | Masked: XXXXXXXX9012
+2026-04-09 12:38:02,619 | INFO | [3/42] ID=75 | MIGRATED | Masked: XXXXXXXX9012
+2026-04-09 12:38:02,953 | INFO | [4/42] ID=76 | MIGRATED | Masked: XXXXXXXX1001
+2026-04-09 12:38:03,280 | INFO | [5/42] ID=77 | MIGRATED | Masked: XXXXXXXX1002
+2026-04-09 12:38:03,581 | INFO | [6/42] ID=78 | MIGRATED | Masked: XXXXXXXX1003
+2026-04-09 12:38:03,881 | INFO | [7/42] ID=79 | MIGRATED | Masked: XXXXXXXX1004
+2026-04-09 12:38:04,200 | INFO | [8/42] ID=80 | MIGRATED | Masked: XXXXXXXX1005
+2026-04-09 12:38:04,507 | INFO | [9/42] ID=81 | MIGRATED | Masked: XXXXXXXX1006
+2026-04-09 12:38:04,809 | INFO | [10/42] ID=82 | MIGRATED | Masked: XXXXXXXX1007
+2026-04-09 12:38:05,103 | INFO | [11/42] ID=83 | MIGRATED | Masked: XXXXXXXX1008
+2026-04-09 12:38:05,417 | INFO | [12/42] ID=84 | MIGRATED | Masked: XXXXXXXX1009
+2026-04-09 12:38:05,744 | INFO | [13/42] ID=85 | MIGRATED | Masked: XXXXXXXX9881
+2026-04-09 12:38:05,745 | WARNING | [14/42] ID=86 | SKIPPED (invalid format: '****' length=0)
+2026-04-09 12:38:06,164 | INFO | [15/42] ID=98 | MIGRATED | Masked: XXXXXXXX6789
+2026-04-09 12:38:06,484 | INFO | [16/42] ID=101 | MIGRATED | Masked: XXXXXXXX5446
+2026-04-09 12:38:06,778 | INFO | [17/42] ID=102 | MIGRATED | Masked: XXXXXXXX8282
+2026-04-09 12:38:07,088 | INFO | [18/42] ID=103 | MIGRATED | Masked: XXXXXXXX8554
+2026-04-09 12:38:07,383 | INFO | [19/42] ID=105 | MIGRATED | Masked: XXXXXXXX5858
+2026-04-09 12:38:07,694 | INFO | [20/42] ID=106 | MIGRATED | Masked: XXXXXXXX9498
+2026-04-09 12:38:07,996 | INFO | [21/42] ID=107 | MIGRATED | Masked: XXXXXXXX4655
+2026-04-09 12:38:08,290 | INFO | [22/42] ID=108 | MIGRATED | Masked: XXXXXXXX8488
+2026-04-09 12:38:08,600 | INFO | [23/42] ID=109 | MIGRATED | Masked: XXXXXXXX9264
+2026-04-09 12:38:08,901 | INFO | [24/42] ID=110 | MIGRATED | Masked: XXXXXXXX5658
+2026-04-09 12:38:09,193 | INFO | [25/42] ID=111 | MIGRATED | Masked: XXXXXXXX8788
+2026-04-09 12:38:09,479 | INFO | [26/42] ID=112 | MIGRATED | Masked: XXXXXXXX9666
+2026-04-09 12:38:09,821 | INFO | [27/42] ID=113 | MIGRATED | Masked: XXXXXXXX2342
+2026-04-09 12:38:10,146 | INFO | [28/42] ID=114 | MIGRATED | Masked: XXXXXXXX4897
+2026-04-09 12:38:10,449 | INFO | [29/42] ID=115 | MIGRATED | Masked: XXXXXXXX1234
+2026-04-09 12:38:10,742 | INFO | [30/42] ID=116 | MIGRATED | Masked: XXXXXXXX3455
+2026-04-09 12:38:11,040 | INFO | [31/42] ID=119 | MIGRATED | Masked: XXXXXXXX1532
+2026-04-09 12:38:11,343 | INFO | [32/42] ID=120 | MIGRATED | Masked: XXXXXXXX5177
+2026-04-09 12:38:11,686 | INFO | [33/42] ID=121 | MIGRATED | Masked: XXXXXXXX4690
+2026-04-09 12:38:11,976 | INFO | [34/42] ID=122 | MIGRATED | Masked: XXXXXXXX3732
+2026-04-09 12:38:12,278 | INFO | [35/42] ID=123 | MIGRATED | Masked: XXXXXXXX9766
+2026-04-09 12:38:12,593 | INFO | [36/42] ID=124 | MIGRATED | Masked: XXXXXXXX5628
+2026-04-09 12:38:12,890 | INFO | [37/42] ID=125 | MIGRATED | Masked: XXXXXXXX6956
+2026-04-09 12:38:13,248 | INFO | [38/42] ID=126 | MIGRATED | Masked: XXXXXXXX9796
+2026-04-09 12:38:13,607 | INFO | [39/42] ID=128 | MIGRATED | Masked: XXXXXXXX8559
+2026-04-09 12:38:13,939 | INFO | [40/42] ID=129 | MIGRATED | Masked: XXXXXXXX6766
+2026-04-09 12:38:14,284 | INFO | [41/42] ID=132 | MIGRATED | Masked: XXXXXXXX4888
+2026-04-09 12:38:14,624 | INFO | [42/42] ID=133 | MIGRATED | Masked: XXXXXXXX4664
+2026-04-09 12:38:14,655 | ERROR | Migration aborted due to error: (pymysql.err.OperationalError) (2006, "MySQL server has gone away (ConnectionResetError(104, 'Connection reset by peer'))")
+[SQL: UPDATE pregnant_women SET aadhaar_number=%(aadhaar_number)s, aadhaar_masked=%(aadhaar_masked)s, updated_at=%(updated_at)s WHERE pregnant_women.id = %(pregnant_women_id)s]
+[parameters: [{'aadhaar_number': '$2b$12$t60KzmiJ4/I8e5mFVmzpGut2j4e9E5FXcDebkKwuzD8v86NATU1Vm', 'aadhaar_masked': 'XXXXXXXX1010', 'updated_at': datetime.datetime(2026, 4, 9, 12, 38, 14, 649401), 'pregnant_women_id': 73}, {'aadhaar_number': '$2b$12$iQHh7C7hSONeEzF.PVLRZuWvJ.tgCVxUCk7oIuwM3QlVrQkt760d.', 'aadhaar_masked': 'XXXXXXXX9012', 'updated_at': datetime.datetime(2026, 4, 9, 12, 38, 14, 649426), 'pregnant_women_id': 74}, {'aadhaar_number': '$2b$12$NfDU/2rkmH8Ed8/76VAMLemCrRbbDUUXNkOP5mwTGOQ/vYrc/vDGK', 'aadhaar_masked': 'XXXXXXXX9012', 'updated_at': datetime.datetime(2026, 4, 9, 12, 38, 14, 649428), 'pregnant_women_id': 75}, {'aadhaar_number': '$2b$12$DpXtqHTThDQpkjMXOsvDduoBht.QX00EYF2DFyV7YbqgNa5hqfTV.', 'aadhaar_masked': 'XXXXXXXX1001', 'updated_at': datetime.datetime(2026, 4, 9, 12, 38, 14, 649430), 'pregnant_women_id': 76}, {'aadhaar_number': '$2b$12$0Yh.htf.pn8c35pMztv6GeUNxTEKxlLOs0IAkL.ZWNfiZQr7QhgEa', 'aadhaar_masked': 'XXXXXXXX1002', 'updated_at': datetime.datetime(2026, 4, 9, 12, 38, 14, 649432), 'pregnant_women_id': 77}, {'aadhaar_number': '$2b$12$uWBp6X/DHs2abPC.nrSdGuk8DEyxTmpNlVX4i3JiSGiQZcR/zkv6e', 'aadhaar_masked': 'XXXXXXXX1003', 'updated_at': datetime.datetime(2026, 4, 9, 12, 38, 14, 649433), 'pregnant_women_id': 78}, {'aadhaar_number': '$2b$12$c4MLE6wTIQ6o8AAjSmVb5OZ8NNNEqF/4DL5KPRG6NPM4Z9QOL1pGW', 'aadhaar_masked': 'XXXXXXXX1004', 'updated_at': datetime.datetime(2026, 4, 9, 12, 38, 14, 649435), 'pregnant_women_id': 79}, {'aadhaar_number': '$2b$12$dimb5QNd4tlbklVSymOY5.nxdorSUQ4meyBhEyshksMk6hvPu.GAW', 'aadhaar_masked': 'XXXXXXXX1005', 'updated_at': datetime.datetime(2026, 4, 9, 12, 38, 14, 649436), 'pregnant_women_id': 80}  ... displaying 10 of 41 total bound parameter sets ...  {'aadhaar_number': '$2b$12$WX6ChTQkI8sp8NxiORN9YOoifA8WaEUwLVCebzfJIKcmtnMEulLN.', 'aadhaar_masked': 'XXXXXXXX4888', 'updated_at': datetime.datetime(2026, 4, 9, 12, 38, 14, 649487), 'pregnant_women_id': 132}, {'aadhaar_number': '$2b$12$u3Wjv.LRr6kDdnxnnfuYZun2GGi/tbDsIqMc2zkn1YTRTenpA1EGu', 'aadhaar_masked': 'XXXXXXXX4664', 'updated_at': datetime.datetime(2026, 4, 9, 12, 38, 14, 649489), 'pregnant_women_id': 133}]]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-04-09 12:41:02,627 | INFO | ============================================================
+2026-04-09 12:41:02,627 | INFO | Aadhaar Migration Started
+2026-04-09 12:41:02,627 | INFO | Timestamp: 2026-04-09 12:41:02
+2026-04-09 12:41:02,627 | INFO | ============================================================
+2026-04-09 12:41:02,803 | INFO | Total records with Aadhaar number: 42
+2026-04-09 12:41:03,166 | INFO | [1/42] ID=73 | MIGRATED | Masked: XXXXXXXX1010
+2026-04-09 12:41:03,488 | INFO | [2/42] ID=74 | MIGRATED | Masked: XXXXXXXX9012
+2026-04-09 12:41:03,799 | INFO | [3/42] ID=75 | MIGRATED | Masked: XXXXXXXX9012
+2026-04-09 12:41:04,128 | INFO | [4/42] ID=76 | MIGRATED | Masked: XXXXXXXX1001
+2026-04-09 12:41:04,455 | INFO | [5/42] ID=77 | MIGRATED | Masked: XXXXXXXX1002
+2026-04-09 12:41:04,769 | INFO | [6/42] ID=78 | MIGRATED | Masked: XXXXXXXX1003
+2026-04-09 12:41:05,087 | INFO | [7/42] ID=79 | MIGRATED | Masked: XXXXXXXX1004
+2026-04-09 12:41:05,422 | INFO | [8/42] ID=80 | MIGRATED | Masked: XXXXXXXX1005
+2026-04-09 12:41:05,809 | INFO | [9/42] ID=81 | MIGRATED | Masked: XXXXXXXX1006
+2026-04-09 12:41:06,171 | INFO | [10/42] ID=82 | MIGRATED | Masked: XXXXXXXX1007
+2026-04-09 12:41:06,515 | INFO | [11/42] ID=83 | MIGRATED | Masked: XXXXXXXX1008
+2026-04-09 12:41:06,847 | INFO | [12/42] ID=84 | MIGRATED | Masked: XXXXXXXX1009
+2026-04-09 12:41:07,176 | INFO | [13/42] ID=85 | MIGRATED | Masked: XXXXXXXX9881
+2026-04-09 12:41:07,180 | WARNING | [14/42] ID=86 | SKIPPED (invalid format: '****' length=0)
+2026-04-09 12:41:07,513 | INFO | [15/42] ID=98 | MIGRATED | Masked: XXXXXXXX6789
+2026-04-09 12:41:07,859 | INFO | [16/42] ID=101 | MIGRATED | Masked: XXXXXXXX5446
+2026-04-09 12:41:08,185 | INFO | [17/42] ID=102 | MIGRATED | Masked: XXXXXXXX8282
+2026-04-09 12:41:08,486 | INFO | [18/42] ID=103 | MIGRATED | Masked: XXXXXXXX8554
+2026-04-09 12:41:08,802 | INFO | [19/42] ID=105 | MIGRATED | Masked: XXXXXXXX5858
+2026-04-09 12:41:09,171 | INFO | [20/42] ID=106 | MIGRATED | Masked: XXXXXXXX9498
+2026-04-09 12:41:09,511 | INFO | [21/42] ID=107 | MIGRATED | Masked: XXXXXXXX4655
+2026-04-09 12:41:09,845 | INFO | [22/42] ID=108 | MIGRATED | Masked: XXXXXXXX8488
+2026-04-09 12:41:10,201 | INFO | [23/42] ID=109 | MIGRATED | Masked: XXXXXXXX9264
+2026-04-09 12:41:10,530 | INFO | [24/42] ID=110 | MIGRATED | Masked: XXXXXXXX5658
+2026-04-09 12:41:10,901 | INFO | [25/42] ID=111 | MIGRATED | Masked: XXXXXXXX8788
+2026-04-09 12:41:11,215 | INFO | [26/42] ID=112 | MIGRATED | Masked: XXXXXXXX9666
+2026-04-09 12:41:11,530 | INFO | [27/42] ID=113 | MIGRATED | Masked: XXXXXXXX2342
+2026-04-09 12:41:11,841 | INFO | [28/42] ID=114 | MIGRATED | Masked: XXXXXXXX4897
+2026-04-09 12:41:12,170 | INFO | [29/42] ID=115 | MIGRATED | Masked: XXXXXXXX1234
+2026-04-09 12:41:12,469 | INFO | [30/42] ID=116 | MIGRATED | Masked: XXXXXXXX3455
+2026-04-09 12:41:12,768 | INFO | [31/42] ID=119 | MIGRATED | Masked: XXXXXXXX1532
+2026-04-09 12:41:13,095 | INFO | [32/42] ID=120 | MIGRATED | Masked: XXXXXXXX5177
+2026-04-09 12:41:13,502 | INFO | [33/42] ID=121 | MIGRATED | Masked: XXXXXXXX4690
+2026-04-09 12:41:13,895 | INFO | [34/42] ID=122 | MIGRATED | Masked: XXXXXXXX3732
+2026-04-09 12:41:14,247 | INFO | [35/42] ID=123 | MIGRATED | Masked: XXXXXXXX9766
+2026-04-09 12:41:14,565 | INFO | [36/42] ID=124 | MIGRATED | Masked: XXXXXXXX5628
+2026-04-09 12:41:14,874 | INFO | [37/42] ID=125 | MIGRATED | Masked: XXXXXXXX6956
+2026-04-09 12:41:15,189 | INFO | [38/42] ID=126 | MIGRATED | Masked: XXXXXXXX9796
+2026-04-09 12:41:15,516 | INFO | [39/42] ID=128 | MIGRATED | Masked: XXXXXXXX8559
+2026-04-09 12:41:15,830 | INFO | [40/42] ID=129 | MIGRATED | Masked: XXXXXXXX6766
+2026-04-09 12:41:16,154 | INFO | [41/42] ID=132 | MIGRATED | Masked: XXXXXXXX4888
+2026-04-09 12:41:16,469 | INFO | [42/42] ID=133 | MIGRATED | Masked: XXXXXXXX4664
+2026-04-09 12:41:16,471 | INFO | ============================================================
+2026-04-09 12:41:16,471 | INFO | Migration Summary
+2026-04-09 12:41:16,471 | INFO |   Total records found : 42
+2026-04-09 12:41:16,471 | INFO |   Migrated            : 41
+2026-04-09 12:41:16,471 | INFO |   Skipped             : 1
+2026-04-09 12:41:16,472 | INFO |   Failed              : 0
+2026-04-09 12:41:16,472 | INFO |   Log file            : /home/narendra/janani-jyoti_v2.0/utilities/migrate_aadhaar.log
+2026-04-09 12:41:16,472 | INFO | ============================================================
+2026-04-09 12:41:16,472 | INFO | Migration completed successfully with no failures.
+2026-04-09 14:41:26,021 | INFO | ============================================================
+2026-04-09 14:41:26,025 | INFO | Aadhaar Migration Started
+2026-04-09 14:41:26,025 | INFO | Timestamp: 2026-04-09 14:41:26
+2026-04-09 14:41:26,025 | INFO | ============================================================
+2026-04-09 14:41:26,195 | INFO | Total records with Aadhaar number: 42
+2026-04-09 14:41:26,195 | INFO | [1/42] ID=73 | SKIPPED (already hashed)
+2026-04-09 14:41:26,196 | INFO | [2/42] ID=74 | SKIPPED (already hashed)
+2026-04-09 14:41:26,196 | INFO | [3/42] ID=75 | SKIPPED (already hashed)
+2026-04-09 14:41:26,196 | INFO | [4/42] ID=76 | SKIPPED (already hashed)
+2026-04-09 14:41:26,196 | INFO | [5/42] ID=77 | SKIPPED (already hashed)
+2026-04-09 14:41:26,196 | INFO | [6/42] ID=78 | SKIPPED (already hashed)
+2026-04-09 14:41:26,196 | INFO | [7/42] ID=79 | SKIPPED (already hashed)
+2026-04-09 14:41:26,196 | INFO | [8/42] ID=80 | SKIPPED (already hashed)
+2026-04-09 14:41:26,196 | INFO | [9/42] ID=81 | SKIPPED (already hashed)
+2026-04-09 14:41:26,196 | INFO | [10/42] ID=82 | SKIPPED (already hashed)
+2026-04-09 14:41:26,196 | INFO | [11/42] ID=83 | SKIPPED (already hashed)
+2026-04-09 14:41:26,196 | INFO | [12/42] ID=84 | SKIPPED (already hashed)
+2026-04-09 14:41:26,196 | INFO | [13/42] ID=85 | SKIPPED (already hashed)
+2026-04-09 14:41:26,197 | WARNING | [14/42] ID=86 | SKIPPED (invalid format: '****' length=0)
+2026-04-09 14:41:26,197 | INFO | [15/42] ID=98 | SKIPPED (already hashed)
+2026-04-09 14:41:26,197 | INFO | [16/42] ID=101 | SKIPPED (already hashed)
+2026-04-09 14:41:26,197 | INFO | [17/42] ID=102 | SKIPPED (already hashed)
+2026-04-09 14:41:26,197 | INFO | [18/42] ID=103 | SKIPPED (already hashed)
+2026-04-09 14:41:26,197 | INFO | [19/42] ID=105 | SKIPPED (already hashed)
+2026-04-09 14:41:26,197 | INFO | [20/42] ID=106 | SKIPPED (already hashed)
+2026-04-09 14:41:26,197 | INFO | [21/42] ID=107 | SKIPPED (already hashed)
+2026-04-09 14:41:26,197 | INFO | [22/42] ID=108 | SKIPPED (already hashed)
+2026-04-09 14:41:26,197 | INFO | [23/42] ID=109 | SKIPPED (already hashed)
+2026-04-09 14:41:26,197 | INFO | [24/42] ID=110 | SKIPPED (already hashed)
+2026-04-09 14:41:26,197 | INFO | [25/42] ID=111 | SKIPPED (already hashed)
+2026-04-09 14:41:26,198 | INFO | [26/42] ID=112 | SKIPPED (already hashed)
+2026-04-09 14:41:26,198 | INFO | [27/42] ID=113 | SKIPPED (already hashed)
+2026-04-09 14:41:26,198 | INFO | [28/42] ID=114 | SKIPPED (already hashed)
+2026-04-09 14:41:26,198 | INFO | [29/42] ID=115 | SKIPPED (already hashed)
+2026-04-09 14:41:26,198 | INFO | [30/42] ID=116 | SKIPPED (already hashed)
+2026-04-09 14:41:26,198 | INFO | [31/42] ID=119 | SKIPPED (already hashed)
+2026-04-09 14:41:26,198 | INFO | [32/42] ID=120 | SKIPPED (already hashed)
+2026-04-09 14:41:26,198 | INFO | [33/42] ID=121 | SKIPPED (already hashed)
+2026-04-09 14:41:26,198 | INFO | [34/42] ID=122 | SKIPPED (already hashed)
+2026-04-09 14:41:26,198 | INFO | [35/42] ID=123 | SKIPPED (already hashed)
+2026-04-09 14:41:26,198 | INFO | [36/42] ID=124 | SKIPPED (already hashed)
+2026-04-09 14:41:26,198 | INFO | [37/42] ID=125 | SKIPPED (already hashed)
+2026-04-09 14:41:26,198 | INFO | [38/42] ID=126 | SKIPPED (already hashed)
+2026-04-09 14:41:26,198 | INFO | [39/42] ID=128 | SKIPPED (already hashed)
+2026-04-09 14:41:26,199 | INFO | [40/42] ID=129 | SKIPPED (already hashed)
+2026-04-09 14:41:26,199 | INFO | [41/42] ID=132 | SKIPPED (already hashed)
+2026-04-09 14:41:26,199 | INFO | [42/42] ID=133 | SKIPPED (already hashed)
+2026-04-09 14:41:26,202 | INFO | ============================================================
+2026-04-09 14:41:26,202 | INFO | Migration Summary
+2026-04-09 14:41:26,202 | INFO |   Total records found : 42
+2026-04-09 14:41:26,203 | INFO |   Migrated            : 0
+2026-04-09 14:41:26,203 | INFO |   Skipped             : 42
+2026-04-09 14:41:26,203 | INFO |   Failed              : 0
+2026-04-09 14:41:26,203 | INFO |   Log file            : /home/narendra/janani-jyoti_v2.0/utilities/migrate_aadhaar.log
+2026-04-09 14:41:26,203 | INFO | ============================================================
+2026-04-09 14:41:26,203 | INFO | Migration completed successfully with no failures.
+2026-04-09 14:46:34,107 | INFO | ============================================================
+2026-04-09 14:46:34,107 | INFO | Aadhaar Migration Started
+2026-04-09 14:46:34,107 | INFO | Timestamp: 2026-04-09 14:46:34
+2026-04-09 14:46:34,107 | INFO | ============================================================
+2026-04-09 14:46:34,245 | INFO | Total records with Aadhaar number: 42
+2026-04-09 14:46:34,245 | INFO | [1/42] ID=73 | SKIPPED (already hashed)
+2026-04-09 14:46:34,245 | INFO | [2/42] ID=74 | SKIPPED (already hashed)
+2026-04-09 14:46:34,245 | INFO | [3/42] ID=75 | SKIPPED (already hashed)
+2026-04-09 14:46:34,246 | INFO | [4/42] ID=76 | SKIPPED (already hashed)
+2026-04-09 14:46:34,246 | INFO | [5/42] ID=77 | SKIPPED (already hashed)
+2026-04-09 14:46:34,246 | INFO | [6/42] ID=78 | SKIPPED (already hashed)
+2026-04-09 14:46:34,246 | INFO | [7/42] ID=79 | SKIPPED (already hashed)
+2026-04-09 14:46:34,246 | INFO | [8/42] ID=80 | SKIPPED (already hashed)
+2026-04-09 14:46:34,246 | INFO | [9/42] ID=81 | SKIPPED (already hashed)
+2026-04-09 14:46:34,246 | INFO | [10/42] ID=82 | SKIPPED (already hashed)
+2026-04-09 14:46:34,246 | INFO | [11/42] ID=83 | SKIPPED (already hashed)
+2026-04-09 14:46:34,246 | INFO | [12/42] ID=84 | SKIPPED (already hashed)
+2026-04-09 14:46:34,246 | INFO | [13/42] ID=85 | SKIPPED (already hashed)
+2026-04-09 14:46:34,246 | WARNING | [14/42] ID=86 | SKIPPED (invalid format: '****' length=0)
+2026-04-09 14:46:34,246 | INFO | [15/42] ID=98 | SKIPPED (already hashed)
+2026-04-09 14:46:34,246 | INFO | [16/42] ID=101 | SKIPPED (already hashed)
+2026-04-09 14:46:34,246 | INFO | [17/42] ID=102 | SKIPPED (already hashed)
+2026-04-09 14:46:34,246 | INFO | [18/42] ID=103 | SKIPPED (already hashed)
+2026-04-09 14:46:34,246 | INFO | [19/42] ID=105 | SKIPPED (already hashed)
+2026-04-09 14:46:34,246 | INFO | [20/42] ID=106 | SKIPPED (already hashed)
+2026-04-09 14:46:34,247 | INFO | [21/42] ID=107 | SKIPPED (already hashed)
+2026-04-09 14:46:34,247 | INFO | [22/42] ID=108 | SKIPPED (already hashed)
+2026-04-09 14:46:34,247 | INFO | [23/42] ID=109 | SKIPPED (already hashed)
+2026-04-09 14:46:34,247 | INFO | [24/42] ID=110 | SKIPPED (already hashed)
+2026-04-09 14:46:34,247 | INFO | [25/42] ID=111 | SKIPPED (already hashed)
+2026-04-09 14:46:34,247 | INFO | [26/42] ID=112 | SKIPPED (already hashed)
+2026-04-09 14:46:34,247 | INFO | [27/42] ID=113 | SKIPPED (already hashed)
+2026-04-09 14:46:34,247 | INFO | [28/42] ID=114 | SKIPPED (already hashed)
+2026-04-09 14:46:34,247 | INFO | [29/42] ID=115 | SKIPPED (already hashed)
+2026-04-09 14:46:34,247 | INFO | [30/42] ID=116 | SKIPPED (already hashed)
+2026-04-09 14:46:34,247 | INFO | [31/42] ID=119 | SKIPPED (already hashed)
+2026-04-09 14:46:34,247 | INFO | [32/42] ID=120 | SKIPPED (already hashed)
+2026-04-09 14:46:34,247 | INFO | [33/42] ID=121 | SKIPPED (already hashed)
+2026-04-09 14:46:34,247 | INFO | [34/42] ID=122 | SKIPPED (already hashed)
+2026-04-09 14:46:34,247 | INFO | [35/42] ID=123 | SKIPPED (already hashed)
+2026-04-09 14:46:34,247 | INFO | [36/42] ID=124 | SKIPPED (already hashed)
+2026-04-09 14:46:34,247 | INFO | [37/42] ID=125 | SKIPPED (already hashed)
+2026-04-09 14:46:34,247 | INFO | [38/42] ID=126 | SKIPPED (already hashed)
+2026-04-09 14:46:34,247 | INFO | [39/42] ID=128 | SKIPPED (already hashed)
+2026-04-09 14:46:34,247 | INFO | [40/42] ID=129 | SKIPPED (already hashed)
+2026-04-09 14:46:34,248 | INFO | [41/42] ID=132 | SKIPPED (already hashed)
+2026-04-09 14:46:34,248 | INFO | [42/42] ID=133 | SKIPPED (already hashed)
+2026-04-09 14:46:34,251 | INFO | ============================================================
+2026-04-09 14:46:34,251 | INFO | Migration Summary
+2026-04-09 14:46:34,251 | INFO |   Total records found : 42
+2026-04-09 14:46:34,251 | INFO |   Migrated            : 0
+2026-04-09 14:46:34,252 | INFO |   Skipped             : 42
+2026-04-09 14:46:34,252 | INFO |   Failed              : 0
+2026-04-09 14:46:34,252 | INFO |   Log file            : /home/narendra/janani-jyoti_v2.0/utilities/migrate_aadhaar.log
+2026-04-09 14:46:34,252 | INFO | ============================================================
+2026-04-09 14:46:34,252 | INFO | Migration completed successfully with no failures.

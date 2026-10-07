@@ -1,0 +1,219 @@
+/* ==========================================================================
+   Shared list-screen controls
+   One source of truth for search, entries dropdown, filters, action buttons,
+   tabs and pagination across every list/management screen.
+   Every control is 40px tall, 8px radius, 12px apart.
+   ========================================================================== */
+
+:root {
+  --lc-control-h: 40px;
+  --lc-radius: 8px;
+  --lc-gap: 12px;
+  --lc-page-btn: 32px;
+}
+
+/* ---- Tabs row (sits above the toolbar, never shares a line with it) ------ */
+.lc-tabs {
+  margin-bottom: 16px;
+  overflow-x: auto;
+}
+.lc-tabs .nav {
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+/* ---- Toolbar: filters on the left, actions on the right ------------------ */
+.lc-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--lc-gap) 16px;
+  margin-bottom: 20px;
+}
+.lc-toolbar__left,
+.lc-toolbar__right {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--lc-gap);
+  min-width: 0;
+}
+.lc-toolbar__right {
+  margin-left: auto;
+}
+
+/* Toolbar that lives in a card-header */
+.card-header.lc-toolbar {
+  margin-bottom: 0;
+  padding: 16px 24px;
+}
+
+/* ---- Entries dropdown ("Show [10] entries") ------------------------------ */
+.lc-entries {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  font-size: 14px;
+  line-height: 1;
+  color: var(--text-secondary-light, #6b7280);
+}
+.lc-entries .form-select {
+  width: auto;
+  min-width: 76px;
+  height: var(--lc-control-h);
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 12px;
+  font-size: 14px;
+  border-radius: var(--lc-radius);
+}
+
+/* ---- Search box ---------------------------------------------------------- */
+.lc-search {
+  position: relative;
+  flex: 0 1 260px;
+  width: 260px;
+  max-width: 100%;
+}
+.lc-search .form-control {
+  height: var(--lc-control-h);
+  width: 100%;
+  padding: 0 34px 0 38px;
+  font-size: 14px;
+  border-radius: var(--lc-radius);
+}
+.lc-search__icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  pointer-events: none;
+  color: var(--text-secondary-light, #6b7280);
+}
+.lc-search__clear {
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  border-radius: 6px;
+  font-size: 16px;
+  color: var(--text-secondary-light, #6b7280);
+}
+.lc-search__clear:hover {
+  background: rgba(107, 114, 128, 0.12);
+}
+
+/* ---- Filter dropdowns ---------------------------------------------------- */
+.lc-select {
+  width: auto;
+  min-width: 140px;
+  max-width: 220px;
+  height: var(--lc-control-h);
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 12px;
+  font-size: 14px;
+  border-radius: var(--lc-radius);
+}
+
+/* ---- Buttons (Add New / Bulk Upload / Refresh / Create ...) --------------- */
+.btn.lc-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: var(--lc-control-h);
+  padding: 0 16px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+  border-radius: var(--lc-radius);
+}
+.btn.lc-btn .lc-btn__icon {
+  font-size: 18px;
+  line-height: 1;
+}
+
+/* ---- Footer: "Showing x to y" + pager ------------------------------------ */
+.lc-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--lc-gap);
+  margin-top: 24px;
+}
+.lc-footer__summary {
+  font-size: 14px;
+  color: var(--text-secondary-light, #6b7280);
+}
+.lc-pager {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.lc-pager .page-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  min-width: var(--lc-page-btn);
+  height: var(--lc-page-btn);
+  padding: 0 6px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  border: 0;
+  border-radius: var(--lc-radius);
+}
+.lc-pager .page-link:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+.lc-pager .lc-pager__ellipsis {
+  background: transparent;
+  cursor: default;
+}
+
+/* ---- Small screens: stack controls full-width ---------------------------- */
+@media (max-width: 575.98px) {
+  .lc-toolbar__left,
+  .lc-toolbar__right {
+    width: 100%;
+  }
+  .lc-toolbar__right {
+    margin-left: 0;
+  }
+  .lc-search {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+  .lc-select {
+    flex: 1 1 140px;
+    max-width: none;
+  }
+  .lc-footer {
+    justify-content: center;
+  }
+}
+
+/* Toolbar / tabs placed inside a card-header: no extra outer margins */
+.card-header > .lc-toolbar { margin-bottom: 0; }
+.card-header > .lc-tabs { margin-bottom: 16px; }

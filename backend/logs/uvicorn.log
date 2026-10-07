@@ -1,0 +1,3 @@
+nohup: ignoring input
+INFO:     Will watch for changes in these directories: ['/home/narendra/janani-jyoti_v2.0/logs']
+ERROR:    [Errno 98] Address already in use
